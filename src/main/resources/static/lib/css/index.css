@@ -1,0 +1,44 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background: url("/images/background/bg.jpg") no-repeat;
+    background-size: 100%;
+
+}
+.login{
+
+    width:500px;
+   margin:300px auto ;
+}
+input{
+    width:400px;
+}
+.layui-input{
+    width:300px;
+}
+.form{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height:420px;
+    background-color: rgba(226,226,228,70%);
+}
+
+
+.top{
+    text-align: center;
+    color: black;
+    font-size: 30px
+}
+.layui-textarea{
+    height:50px;
+    width:300px;
+}
+.layui-form-label{
+    color: white;
+    font-size: 18px;
+    font-family: 幼圆;
+}
