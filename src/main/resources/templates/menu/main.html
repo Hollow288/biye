@@ -16,7 +16,7 @@
         float: left;
     }
     body{
-        background-image: url("images/background/page_bg.JPG");
+        background-image: url("/images/background/page_bg.JPG");
         background-size: 100%;
 
     }
@@ -70,13 +70,12 @@
     <li class="layui-nav-item">
         <a th:href="@{/index}">首页</a>
     </li>
-    <li class="layui-nav-item">
-        <dd class="main_left"><a data-src="/userinfo">个人中心<span class="layui-badge-dot"></span></a></dd>
-    </li>
-    <li class="layui-nav-item">
-        <a th:href="@{/index}"><img src="/images/2019-08-07/f8aa0870-e4ea-4170-9772-296204476267.jpg" class="layui-nav-img" th:text="'你好，'+${session.user.username}"></a>
 
+
+    <li class="layui-nav-item">
+        <p th:text="'你好，'+${session.user.username}"></p>
     </li>
+
     <li class="layui-nav-item">
         <a href="quite">退出登录</a>
 

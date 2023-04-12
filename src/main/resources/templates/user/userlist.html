@@ -78,7 +78,6 @@
     <tr>
         <th>ID</th>
         <th>用户名</th>
-        <th>头像</th>
         <th>邮箱</th>
         <th>性别</th>
         <th>生日</th>
@@ -91,7 +90,6 @@
     <tr th:each="user:${userList}">
         <td th:text="${user.uid}"></td>
         <td th:text="${user.username}"></td>
-        <td ><img width="40px" height="40px" th:src="${user.images}"></td>
         <td th:text="${user.email}"></td>
         <td th:text="${user.gender}"></td>
         <td th:text="${user.birthday}"></td>

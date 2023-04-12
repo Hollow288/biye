@@ -46,8 +46,8 @@ public class UserServiceImpl implements  UserService{
 
     @Override
     public User getUserByUid(int uid) {
-     User user = userMapper.getUserByUid(uid);
-     return user;
+        User user = userMapper.getUserByUid(uid);
+        return user;
     }
     //修改用户信息
 

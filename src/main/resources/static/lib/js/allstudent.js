@@ -88,10 +88,6 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
             {type: 'checkbox', fixed: 'left'}
             ,{field: 'stu_id', title: '学号', width:'10%', sort: true}
             ,{field: 'stu_name', title: '姓名', width:'8%'}
-            ,{field: 'stu_image', title: '头像', sort: false,
-                templet:function (d) { return '<div><img style="height: 30px;width: 30px" src='+d.stu_image+'></div>' }
-
-            }
             ,{field: 'stu_sex', title: '性别', width:'5%', sort: true}
             ,{field: 'stu_id_card', title: '身份证号码', width:'15%', sort: true}
             ,{field: 'stu_birthday', title: '出生日期', width:'10%', sort: true}
