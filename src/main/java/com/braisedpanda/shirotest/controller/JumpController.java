@@ -70,6 +70,9 @@ public class JumpController {
         return "class/classgrades";
     }
 
-
+    @RequestMapping("toaddclassgrades")
+    public String toaddclassgrades(){
+        return "class/addclassgrades";
+    }
 
 }

@@ -120,6 +120,7 @@ public class ClassController {
     }
 
 
+
     //根据classid值删除class
     @ResponseBody
     @RequestMapping("class/delete/{class_id}")

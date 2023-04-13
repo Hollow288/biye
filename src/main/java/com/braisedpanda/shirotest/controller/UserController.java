@@ -213,7 +213,6 @@ public class UserController {
         if(activecode ==null || activecode.length()==0){
             user.setActivecode("0");
         }
-        user.setImages("/images/2019-08-07/f8aa0870-e4ea-4170-9772-296204476267.jpg");
         userService.addUser(user);
 
         model.addAttribute("user",user);
