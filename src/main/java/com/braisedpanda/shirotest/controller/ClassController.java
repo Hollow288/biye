@@ -10,6 +10,7 @@ import com.braisedpanda.shirotest.service.NationService;
 import com.braisedpanda.shirotest.service.StudentService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -148,5 +149,18 @@ public class ClassController {
         model.addAttribute("msg","编辑班级信息成功");
         return "menu/msg";
     }
+
+    //添加班级信息
+    @RequestMapping("class/addclass")
+    public String addclass(SClass scl){
+        SClass sClass = new SClass();
+        BeanUtils.copyProperties(scl,sClass);
+        classService.addClass(sClass);
+
+        return "menu/msg";
+
+    }
+
+
 
 }

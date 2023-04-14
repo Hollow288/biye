@@ -159,6 +159,7 @@ public class StudentController {
     @RequestMapping("toaddstudent")
     public String tostudent(Model model){
 
+        System.out.println("进入到了别人写的方法");
         List<Nation> nationList = nationService.getAllNation();
         model.addAttribute("nationList",nationList);
         List<SClass> classList = classService.getAllClass();
@@ -204,16 +205,7 @@ public class StudentController {
 
     }
 
-    //添加班级信息
-    @RequestMapping("student/addclass")
-    public String addclass(SClass scl){
-        SClass sClass = new SClass();
-        BeanUtils.copyProperties(scl,sClass);
-        classService.addClass(sClass);
 
-        return "menu/msg";
-
-    }
 
 
 }
