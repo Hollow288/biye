@@ -15,7 +15,7 @@ $(function () {
 
             layer.open({
 
-                title: ['学生信息'],
+                title: ['考试信息'],
                 type: 2,
                 content: 'page/student/studentdetail.html',
                 shadeClose: true,

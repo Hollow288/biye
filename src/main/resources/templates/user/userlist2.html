@@ -119,13 +119,14 @@
 
 
 <div class="table">
-    <h2 class="tablename">用户信息表</h2>
-    <hr class="layui-bg-gray">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+        <legend>用户信息表</legend>
+    </fieldset>
 <table class="layui-hide" id="demo" lay-filter="test"></table>
 </div>
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+
+    <a class="layui-btn layui-btn-xs" lay-event="edit">修改</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
@@ -161,7 +162,7 @@
                 ,{field: 'uid', title: 'ID', width:'8%', sort: true}
                 ,{field: 'username', title: '用户名', width:'10%'}
                 ,{field: 'password', title: '密码', width: '10%', sort: true}
-                ,{field: 'email', title: '邮箱', width:'15%', sort: true}
+                ,{field: 'email', title: '邮箱', width:'20%', sort: true}
                 ,{field: 'birthday', title: '生日', width: '10%', sort: true}
                 ,{field: 'gender', title: '性别', width:'8%'}
                 ,{field: 'roleList', title: '角色', width: '15%'}

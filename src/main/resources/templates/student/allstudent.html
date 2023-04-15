@@ -29,14 +29,12 @@
 
 
 <div class="table">
-    <h2 class="tablename">学生信息表</h2>
-    <hr class="layui-bg-gray">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+        <legend>学生信息表</legend>
+    </fieldset>
 <table class="layui-hide" id="demo" lay-filter="test"></table>
 </div>
 <script type="text/html" id="barDemo">
-    <shiro:hasPermission name="retrieve">
-        <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail" >查看</a>
-    </shiro:hasPermission>
 
     <shiro:hasPermission name="update">
       <a class="layui-btn layui-btn-xs" lay-event="edit" id="edit">编辑</a>

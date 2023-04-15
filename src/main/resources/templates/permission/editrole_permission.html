@@ -43,8 +43,9 @@
 
 
 <div class="table">
-    <h2 class="tablename">更改权限</h2>
-    <hr class="layui-bg-green">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+        <legend>更改权限</legend>
+    </fieldset>
     <form class="layui-form" th:action="@{/editrole_permission}">
         <div class="layui-form-item">
             <input type="hidden" name="roleid" th:value="${role_permission.roleid}">
