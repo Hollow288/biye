@@ -35,13 +35,14 @@
 <table class="layui-hide" id="demo" lay-filter="test"></table>
 </div>
 <script type="text/html" id="barDemo">
-
     <shiro:hasPermission name="update">
-      <a class="layui-btn layui-btn-xs" lay-event="edit" id="edit">编辑</a>
+      <!--<a class="layui-btn layui-btn-normal" lay-event="edit" id="edit">修改</a>-->
+        <a class="layui-icon layui-icon-edit" style="font-size: 30px; color: #1E9FFF;" lay-event="edit" id="edit"></a>
     </shiro:hasPermission>
 
     <shiro:hasPermission name="delete">
-     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+     <!--<a class="layui-btn layui-btn-danger" lay-event="del">删除</a>-->
+     <a class="layui-icon layui-icon-delete" style="font-size: 30px; color: crimson;" lay-event="del"></a>
     </shiro:hasPermission>
 
 </script>

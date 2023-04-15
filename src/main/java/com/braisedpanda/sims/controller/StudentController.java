@@ -93,6 +93,8 @@ public class StudentController {
 
 
         resultMap.put("data",studentList);
+        System.out.println(studentList);
+        System.out.println("进入了这个方法");
         return resultMap;
 
     }

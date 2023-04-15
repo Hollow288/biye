@@ -83,13 +83,10 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         ,title: '用户表'
         ,page: true //开启分页
         ,title:'学生信息表'
-        ,toolbar: 'default' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+        ,toolbar: '' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
 
         ,cols: [ [ //表头
-            {type: 'checkbox', fixed: 'left'}
-            // ,{field: 'stu_id', title: '学号', width:'10%', sort: true}
-            // ,{field: 'stu_name', title: '姓名', width:'8%'}
-            ,{field: 'class_id', title: '班级', width:'8%', sort: true}
+            {field: 'class_id', title: '班级', width:'8%', sort: true}
             ,{field: 'test_time', title: '考试时间', width:'8%', sort: true}
             ,{field: 'test_describe', title: '描述', width:'8%', sort: true}
 

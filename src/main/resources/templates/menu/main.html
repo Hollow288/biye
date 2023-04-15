@@ -60,6 +60,18 @@
         font-size: 13px;
     }
 
+    /*.layui-nav .layui-nav-item a:hover,*/
+    /*.layui-nav .layui-nav-item a{*/
+    /*    color:#1E9FFF;*/
+    /*}*/
+    .layui-bg-black{
+        background-color:#1E9FFF
+    }
+
+    .my-nav {
+        background-color: #1E9FFF;
+    }
+
 
 </style>
 
@@ -85,7 +97,7 @@
 
 
 <div class="left" th:fragment="leftbar">
-    <ul class="layui-nav layui-nav-tree  layui-nav-side" lay-filter="test" id="left">
+    <ul class="layui-nav layui-nav-tree  layui-nav-side"   lay-filter="test" id="left">
         <li class="title"><a th:href="@{/index}" style="font-size:18px;font-family: 'Century Gothic';color: #bce8f1">学生信息管理系统</a></li>
         <li class="layui-nav-item layui-nav-itemed">
             <a href="javascript:;">学生班级数据信息</a>

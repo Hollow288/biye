@@ -126,8 +126,8 @@
 </div>
 <script type="text/html" id="barDemo">
 
-    <a class="layui-btn layui-btn-xs" lay-event="edit">修改</a>
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    <a class="layui-icon layui-icon-edit" style="font-size: 30px; color: #1E9FFF;" lay-event="edit"></a>
+    <a class="layui-icon layui-icon-delete" style="font-size: 30px; color: crimson;" lay-event="del"></a>
 </script>
 
 <script>
@@ -154,19 +154,17 @@
             ,url: 'user/table' //数据接口
             ,title: '用户表'
             ,page: true //开启分页
-
-            ,toolbar: 'default' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+            ,toolbar: '' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
 
             ,cols: [ [ //表头
-                {type: 'checkbox', fixed: 'left'}
-                ,{field: 'uid', title: 'ID', width:'8%', sort: true}
+                {field: 'uid', title: 'ID', width:'8%', sort: true}
                 ,{field: 'username', title: '用户名', width:'10%'}
                 ,{field: 'password', title: '密码', width: '10%', sort: true}
                 ,{field: 'email', title: '邮箱', width:'20%', sort: true}
                 ,{field: 'birthday', title: '生日', width: '10%', sort: true}
                 ,{field: 'gender', title: '性别', width:'8%'}
                 ,{field: 'roleList', title: '角色', width: '15%'}
-                ,{fixed: 'right', width: '15%', align:'center', toolbar: '#barDemo'}
+                ,{fixed: 'right', title: '操作',width: '8%', align:'center', toolbar: '#barDemo'}
 
 
             ] ]

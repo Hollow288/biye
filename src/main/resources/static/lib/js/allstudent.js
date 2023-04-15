@@ -82,11 +82,10 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         ,title: '用户表'
         ,page: true //开启分页
         ,title:'学生信息表'
-        ,toolbar: 'default' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+        ,toolbar: '' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
 
         ,cols: [ [ //表头
-            {type: 'checkbox', fixed: 'left'}
-            ,{field: 'stu_id', title: '学号', width:'10%', sort: true}
+            {field: 'stu_id', title: '学号', width:'10%', sort: true}
             ,{field: 'stu_name', title: '姓名', width:'8%'}
             ,{field: 'stu_sex', title: '性别', width:'5%', sort: true}
             ,{field: 'stu_id_card', title: '身份证号码', width:'15%', sort: true}
@@ -101,9 +100,7 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
             ,{field: 'stu_political', title: '政治面貌', width:'8%'}
             ,{field: 'stu_address', title: '住址', width: '8%'}
 
-            ,{fixed: 'right', width: '16%', align:'center', toolbar: '#barDemo'}
-
-
+            ,{fixed: 'right', title: '操作',width: '8%', align:'center', toolbar: '#barDemo'}
         ] ]
     });
 

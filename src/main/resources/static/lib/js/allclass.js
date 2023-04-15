@@ -83,12 +83,10 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         ,limit:'20'
         ,page: true //开启分页
         ,title:'班级信息表'
-        ,toolbar: 'default' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+        ,toolbar: '' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
 
         ,cols: [ [ //表头
-            {type: 'checkbox', fixed: 'left'}
-
-            ,{field: 'class_name', title: '班级名称', width:'8%', sort: true}
+            {field: 'class_name', title: '班级名称', width:'8%', sort: true}
 
             ,{field: 'class_count', title: '学生人数', width:'8%', sort: true}
             ,{field: 'class_teacher', title: '班主任',width:'7%'}
@@ -107,8 +105,7 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
             ,{field: 'arts_teacher', title: '美术老师', width: '7%'}
             ,{field: 'sports_teacher', title: '体育老师', width: '7%'}
 
-            ,{fixed: 'right', width: '12%', align:'center', toolbar: '#barDemo'}
-
+            ,{fixed: 'right',title: '操作',width: '8%', align:'center', toolbar: '#barDemo' }
 
         ] ]
     });
