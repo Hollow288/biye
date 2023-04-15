@@ -65,16 +65,14 @@
 
 <body>
 
-<ul class="layui-nav layui-bg-cyan" id="top-nav">
+<ul class="layui-nav">
+    <li class="layui-nav-item layui-hide-xs"><a data-src="toindex" target="_top">nav 1</a></li>
+</ul>
 
-    <li class="layui-nav-item">
-        <!--<a href="/homepage/index" target="_top">首页</a>-->
-    -
-    </li>
-
-    <li class="layui-nav-item layui-layout-right " >
+<ul class="layui-nav layui-bg-cyan  layui-layout-right ">
+    <li class="layui-nav-item" >
         <a href="javascript:;">
-            <p th:text="'你好，'+${session.user.username}"></p>
+            <p th:text="${session.user.username}"></p>
         </a>
         <dl class="layui-nav-child ">
             <dd><a href="">个人信息</a></dd>
@@ -86,12 +84,11 @@
 </ul>
 
 
-
 <div class="left" th:fragment="leftbar">
     <ul class="layui-nav layui-nav-tree  layui-nav-side" lay-filter="test" id="left">
         <li class="title"><a th:href="@{/index}" style="font-size:18px;font-family: 'Century Gothic';color: #bce8f1">学生信息管理系统</a></li>
         <li class="layui-nav-item layui-nav-itemed">
-            <a href="javascript:;">基本信息</a>
+            <a href="javascript:;">学生班级数据信息</a>
             <dl class="layui-nav-child" >
                 <shiro:hasPermissions name="student_list">
                     <dd class="main_left"><a  data-src="/tostudentlist"  target="_top" >学生列表</a></dd>
@@ -110,7 +107,7 @@
             </dl>
         </li>
         <li class="layui-nav-item">
-            <a href="javascript:;">成绩统计</a>
+            <a href="javascript:;">成绩考试数据信息</a>
             <dl class="layui-nav-child">
                 <shiro:hasPermission name="mygrades">
                     <dd class="main_left"><a data-src="/tostudentgrades" target="_top">我的成绩</a></dd>
@@ -118,10 +115,12 @@
 
                 <dd class="main_left"> <a data-src="/toclassgrades" target="_top">班级成绩</a></dd>
 
+                <dd class="main_left"> <a data-src="/totestes" target="_top">考试信息</a></dd>
+
             </dl>
         </li>
         <li class="layui-nav-item">
-            <a href="javascript:;">操作管理</a>
+            <a href="javascript:;">学生班级信息管理</a>
             <dl class="layui-nav-child">
                 <shiro:hasPermission name="addrole">
                 <dd class="main_left"><a data-src="/toaddstudent" target="_top">添加学生</a></dd>
@@ -129,9 +128,19 @@
                 <shiro:hasPermission name="addrole">
                 <dd class="main_left"><a data-src="/toaddclass" target="_top">添加班级</a></dd>
                 </shiro:hasPermission>
+
+            </dl>
+        </li>
+        <shiro:hasPermission name="allrole">
+        <li class="layui-nav-item">
+            <a href="javascript:;">班级考试信息管理</a>
+            <dl class="layui-nav-child">
+
                 <shiro:hasPermission name="addrole">
                     <dd class="main_left"><a data-src="/toaddclassgrades" target="_top">添加班级成绩</a></dd>
                 </shiro:hasPermission>
+
+
                 <shiro:hasPermission name="addrole">
                     <dd class="main_left"><a data-src="/toaddtest" target="_top">添加考试信息</a></dd>
                 </shiro:hasPermission>
@@ -161,7 +170,6 @@
 
             </dl>
         </li>
-        </shiro:hasPermission>
     </ul>
 
 </div>

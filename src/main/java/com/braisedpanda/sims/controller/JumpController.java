@@ -80,5 +80,11 @@ public class JumpController {
         return "homepage/index";
     }
 
+    @RequestMapping("totestes")
+    public String totestes(){
+        return "class/classtestes";
+    }
+
+
 
 }

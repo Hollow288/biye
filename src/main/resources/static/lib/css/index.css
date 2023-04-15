@@ -34,7 +34,12 @@ input{
     width:300px;
 }
 .layui-form-label{
-    color: white;
+    color: black;
+    font-size: 18px;
+    font-family: 幼圆;
+}
+.login{
+    color: black;
     font-size: 18px;
     font-family: 幼圆;
 }

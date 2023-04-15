@@ -16,6 +16,10 @@
             font-size: 15px;
             margin-left: 80px;
         }
+        .login{
+            background-color: white;
+            font-family: 楷体;
+        }
     </style>
 </head>
 <body>
@@ -29,27 +33,26 @@
             </div>
             <form class="layui-form" th:action="@{/login}" method="post">
                 <br>
-                <label class="layui-form-label" id="tip"  th:text="${tips}"></label>
+                <!--<label class="layui-form-label" id="tip"  th:text="${tips}"></label>-->
                 <div class="layui-form-item">
-                    <label class="layui-form-label">用户名:</label>
                     <div class="layui-input-block">
+                        <label class="login">用户名:</label>
                         <input type="text" name="username" lay-verify="username"   autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <br>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">密码:</label>
                     <div class="layui-input-block">
+                        <label class="login">密码:</label>
                         <input type="password" name="password" lay-verify="password"    autocomplete="off" class="layui-input">
 
                     </div>
 
                 </div>
-                <br>
                 <div class="layui-form-item">
                     <div class="layui-input-block">
-                        <button class="layui-btn" lay-submit="" lay-filter="demo1">登录</button>
-                        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                        <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="demo1">登录</button>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp  &nbsp
                         <a type="reset" class="layui-btn layui-btn-primary" th:href="@{/toregist}">注册</a>
                     </div>
                 </div>
