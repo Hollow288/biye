@@ -2,11 +2,11 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.braisedpanda.shirotest.mapper.ClassMapper">
+<mapper namespace="com.braisedpanda.sims.mapper.ClassMapper">
 
 
     <!--添加班级-->
-    <insert id="addClass" parameterType="com.braisedpanda.shirotest.bean.SClass"
+    <insert id="addClass" parameterType="com.braisedpanda.sims.bean.SClass"
 
     >
         insert into class
@@ -48,7 +48,7 @@
 
 
     <!--查询所有的班级-->
-    <select id="getAllClass" resultType="com.braisedpanda.shirotest.bean.SClass">
+    <select id="getAllClass" resultType="com.braisedpanda.sims.bean.SClass">
         select * from class
     </select>
 
@@ -58,12 +58,12 @@
     </delete>
 
     <!--根据classid查找出class-->
-    <select id="getClassById" resultType="com.braisedpanda.shirotest.bean.SClass">
+    <select id="getClassById" resultType="com.braisedpanda.sims.bean.SClass">
         select * from class where class_id = #{class_id}
     </select>
 
     <!--更新班级信息-->
-    <update id="updateClass" parameterType="com.braisedpanda.shirotest.bean.SClass">
+    <update id="updateClass" parameterType="com.braisedpanda.sims.bean.SClass">
 
         update class set
         class_name=#{class_name},

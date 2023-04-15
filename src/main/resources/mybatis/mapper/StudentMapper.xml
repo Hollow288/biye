@@ -2,11 +2,11 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.braisedpanda.shirotest.mapper.StudentMapper">
+<mapper namespace="com.braisedpanda.sims.mapper.StudentMapper">
 
 
     <!--添加学生-->
-    <insert id="addStudent" parameterType="com.braisedpanda.shirotest.bean.Student"
+    <insert id="addStudent" parameterType="com.braisedpanda.sims.bean.Student"
 
     >
         insert into student
@@ -46,13 +46,13 @@
 
 
     <!--查询所有的学生-->
-    <select id="getAllStudent" resultType="com.braisedpanda.shirotest.bean.Student">
+    <select id="getAllStudent" resultType="com.braisedpanda.sims.bean.Student">
         select * from student
     </select>
 
     <!--根据学生id查询学生-->
     <!--查询所有的学生-->
-    <select id="getStudentById" resultType="com.braisedpanda.shirotest.bean.Student">
+    <select id="getStudentById" resultType="com.braisedpanda.sims.bean.Student">
         select * from student where stu_id = #{stu_id}
     </select>
 
@@ -62,7 +62,7 @@
     </delete>
 
     <!--更新学生信息-->
-    <update id="updateStudent" parameterType="com.braisedpanda.shirotest.bean.Student">
+    <update id="updateStudent" parameterType="com.braisedpanda.sims.bean.Student">
         update student set
         stu_name=#{stu_name},
         stu_password=#{stu_password},
@@ -93,7 +93,7 @@
 
 
 
-    <select id="getStudentByClassId" resultType="com.braisedpanda.shirotest.bean.Student">
+    <select id="getStudentByClassId" resultType="com.braisedpanda.sims.bean.Student">
 
         select * from student where class_id = #{class_id}
 

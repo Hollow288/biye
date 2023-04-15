@@ -28,29 +28,34 @@
 </head>
 <body>
 
-<div class="layui-container">
-    <fieldset class="layui-elem-field layui-field-title">
-        <legend>添加考试信息</legend>
-    </fieldset>
+<div class="body">
+
+    <h2 class="tablename">添加考试信息</h2>
+
+    <br>
+    <br>
 
     <form class="layui-form" action="toaddclassgradcard" method="post">
+
         <div class="layui-form-item">
             <label class="layui-form-label">班级名称</label>
-            <select name="class_id" lay-verify="required">
-                <option th:value="${class.class_id}" th:each="class:${classList}" th:text="${class.class_name}"></option>
-            </select>
+                <div class="layui-input-inline">
+                    <select name="class_id" lay-verify="required">
+                        <option th:value="${class.class_id}" th:each="class:${classList}" th:text="${class.class_name}"></option>
+                    </select>
+                </div>
         </div>
 
         <div class="layui-form-item">
             <label class="layui-form-label">考试时间</label>
-            <div class="layui-input-block">
+            <div class="layui-input-inline">
                 <input type="text" name="test_time"  required lay-verify="required" id="date1" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
             </div>
         </div>
 
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">考试描述</label>
-            <div class="layui-input-block">
+            <div class="layui-input-inline">
                 <textarea name="test_describe" required lay-verify="required" placeholder="请输入考试描述" class="layui-textarea"></textarea>
             </div>
         </div>
@@ -63,8 +68,8 @@
         </div>
     </form>
 
-</div>
 
+</div>
 
 <script>
     layui.use(['form', 'layedit', 'laydate'], function(){

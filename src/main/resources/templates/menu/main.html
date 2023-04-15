@@ -61,31 +61,35 @@
     }
 
 
-
-
 </style>
 
 <body>
+
 <ul class="layui-nav layui-bg-cyan" id="top-nav">
-    <li class="layui-nav-item">
-        <a th:href="@{/index}">首页</a>
-    </li>
-
 
     <li class="layui-nav-item">
-        <p th:text="'你好，'+${session.user.username}"></p>
+        <!--<a href="/homepage/index" target="_top">首页</a>-->
+    -
     </li>
 
-    <li class="layui-nav-item">
-        <a href="quite">退出登录</a>
-
+    <li class="layui-nav-item layui-layout-right " >
+        <a href="javascript:;">
+            <p th:text="'你好，'+${session.user.username}"></p>
+        </a>
+        <dl class="layui-nav-child ">
+            <dd><a href="">个人信息</a></dd>
+            <dd><a href="">编辑信息</a></dd>
+            <dd><a href="quite">退出登录</a></dd>
+        </dl>
     </li>
+
 </ul>
+
 
 
 <div class="left" th:fragment="leftbar">
     <ul class="layui-nav layui-nav-tree  layui-nav-side" lay-filter="test" id="left">
-        <li class="title"><a th:href="@{/index}" style="font-size:18px;font-family: 'Century Gothic';color: #bce8f1">Designed by Layui</a></li>
+        <li class="title"><a th:href="@{/index}" style="font-size:18px;font-family: 'Century Gothic';color: #bce8f1">学生信息管理系统</a></li>
         <li class="layui-nav-item layui-nav-itemed">
             <a href="javascript:;">基本信息</a>
             <dl class="layui-nav-child" >

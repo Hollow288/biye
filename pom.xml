@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.braisedpanda</groupId>
-	<artifactId>shirotest</artifactId>
+	<artifactId>sims</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>shirotest</name>
+	<name>sims</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
