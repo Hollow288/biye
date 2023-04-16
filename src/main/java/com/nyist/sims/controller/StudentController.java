@@ -78,9 +78,10 @@ public class StudentController {
     @RequestMapping("student/all")
     public @ResponseBody
     Map<String,Object> allStudent(int page, int limit){
+
         int count = studentService.getAllStudent().size();
-//        System.out.println(count);
         PageHelper.startPage(page,limit);
+
         List<Student> studentList1 = studentService.getAllStudent();
 
         PageInfo<Student> studentPageInfo = new PageInfo<>(studentList1);
@@ -94,8 +95,7 @@ public class StudentController {
 
 
         resultMap.put("data",studentList);
-//        System.out.println(studentList);
-        System.out.println("进入了这个方法");
+
         return resultMap;
 
     }
@@ -170,9 +170,15 @@ public class StudentController {
     @RequestMapping("student/addstudent")
     public String addstudent(Student student){
         //注册学生信息
-        String stu_id = UUID.randomUUID()+"";
-        stu_id = stu_id.replace("-","");
-        student.setStu_id(stu_id);
+        String stuEnrollmentTime = student.getStu_enrollment_time();
+        String dt = stuEnrollmentTime.substring(2,4);
+        String cl = student.getClass_id().substring(1,4);
+        String sf = student.getStu_id_card().substring(10,18);
+        String zj = dt+cl+sf;
+
+//        String stu_id = UUID.randomUUID()+"";
+//        stu_id = stu_id.replace("-","");
+        student.setStu_id(zj);
 
         studentService.addStudent(student);
 
@@ -185,14 +191,14 @@ public class StudentController {
         user.setBirthday(student.getStu_birthday());
         user.setGender(student.getStu_sex());
         user.setImages(student.getStu_image());
-        user.setActivecode(stu_id);
+        user.setActivecode(zj);
         userService.addUser(user);
 
         //授予该学生权限
 
         User_Role user_role = new User_Role();
         user_role.setUid(user.getUid());
-        user_role.setU_r_id(stu_id);
+        user_role.setU_r_id(zj);
         user_role.setUsername(student.getStu_name());
         user_role.setRoleid("cccdd017ff3b4f9dba8ff77c7836e1f6");
         user_role.setRole("学生");

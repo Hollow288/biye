@@ -53,15 +53,11 @@ public class TestController {
     }
 
 
-    @ResponseBody
-    @RequestMapping("classtestes")
-    public  Map<String,Object> clsstestes(int page,int limit){
-        System.out.println("接收到的page："+page+"接收到的limit："+limit);
 
+    @RequestMapping("classtestes")
+    public @ResponseBody Map<String,Object> clsstestes(int page,int limit){
 
         int count = gradesService.getAllClass_Grades_Card().size();
-
-//        System.out.println(count);
         PageHelper.startPage(page,limit);
 
         List<Class_Grades_Card> allClassGradesCard = gradesService.getAllClass_Grades_Card();
