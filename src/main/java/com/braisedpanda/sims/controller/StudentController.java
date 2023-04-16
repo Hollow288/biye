@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.sql.SQLOutput;
 import java.util.*;
 
 @Controller
@@ -79,6 +80,7 @@ public class StudentController {
     public @ResponseBody
     Map<String,Object> allStudent(int page, int limit){
         int count = studentService.getAllStudent().size();
+//        System.out.println(count);
         PageHelper.startPage(page,limit);
         List<Student> studentList1 = studentService.getAllStudent();
 
@@ -93,7 +95,7 @@ public class StudentController {
 
 
         resultMap.put("data",studentList);
-        System.out.println(studentList);
+//        System.out.println(studentList);
         System.out.println("进入了这个方法");
         return resultMap;
 

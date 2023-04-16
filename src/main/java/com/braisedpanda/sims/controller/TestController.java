@@ -58,8 +58,13 @@ public class TestController {
     @RequestMapping("classtestes")
     public  Map<String,Object> clsstestes(int page,int limit){
         System.out.println("接收到的page："+page+"接收到的limit："+limit);
+
+
         int count = gradesService.getAllClass_Grades_Card().size();
+
+//        System.out.println(count);
         PageHelper.startPage(page,limit);
+
         List<Class_Grades_Card> allClassGradesCard = gradesService.getAllClass_Grades_Card();
 
         PageInfo<Class_Grades_Card> classGradesCardPageInfo = new PageInfo<>(allClassGradesCard);
@@ -72,7 +77,7 @@ public class TestController {
         resultMap.put("count",count);
 //        resultMap.put("data",customList);
         resultMap.put("data",list);
-        System.out.println(list);
+//        System.out.println(list);
         return resultMap;
 
 

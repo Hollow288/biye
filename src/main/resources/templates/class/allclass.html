@@ -24,6 +24,10 @@
 
     }
 
+    .layui-table-fixed {
+        background-color: gray;
+    }
+
 
 </style>
 
@@ -44,10 +48,10 @@
 <script type="text/html" id="barDemo">
 
     <shiro:hasPermission name="update">
-    <a class="layui-icon layui-icon-edit" style="font-size: 30px; color: #1E9FFF;" lay-event="edit" id="edit"></a>
+    <a class="layui-icon layui-icon-edit" style="font-size: 30px; color: #1E9FFF; cursor: pointer;" lay-event="edit" id="edit"></a>
     </shiro:hasPermission>
     <shiro:hasPermission name="delete">
-    <a class="layui-icon layui-icon-delete" style="font-size: 30px; color: crimson;" lay-event="del"></a>
+    <a class="layui-icon layui-icon-delete" style="font-size: 30px; color: crimson; cursor: pointer;" lay-event="del"></a>
     </shiro:hasPermission>
 </script>
 

@@ -11,18 +11,22 @@
     <script th:src="@{/lib/js/jquery-3.4.1.min.js}"></script>
     <script th:src="@{/layui/layui.js}"></script>
 
+    <style>
+        body{
+            background-image: url("images/background/page_bg.JPG");
+            background-size: 100%;
 
+        }
+
+        .layui-table-fixed {
+            background-color: gray;
+        }
+
+    </style>
 
 </head>
 
-<style>
-    body{
-        background-image: url("images/background/page_bg.JPG");
-        background-size: 100%;
 
-    }
-
-</style>
 
 <script>
     //注意：导航 依赖 element 模块，否则无法进行功能性操作
@@ -126,8 +130,8 @@
 </div>
 <script type="text/html" id="barDemo">
 
-    <a class="layui-icon layui-icon-edit" style="font-size: 30px; color: #1E9FFF;" lay-event="edit"></a>
-    <a class="layui-icon layui-icon-delete" style="font-size: 30px; color: crimson;" lay-event="del"></a>
+    <a class="layui-icon layui-icon-edit" style="font-size: 30px; color: #1E9FFF; cursor: pointer;" lay-event="edit"></a>
+    <a class="layui-icon layui-icon-delete" style="font-size: 30px; color: crimson; cursor: pointer;" lay-event="del"></a>
 </script>
 
 <script>
