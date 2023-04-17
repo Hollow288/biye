@@ -56,14 +56,14 @@ public class TestController {
 
     @RequestMapping("classtestes")
     public @ResponseBody Map<String,Object> clsstestes(int page,int limit){
-
-        int count = gradesService.getAllClass_Grades_Card().size();
+//        int count = gradesService.getAllClass_Grades_Card().size();
         PageHelper.startPage(page,limit);
 
         List<Class_Grades_Card> allClassGradesCard = gradesService.getAllClass_Grades_Card();
 
         PageInfo<Class_Grades_Card> classGradesCardPageInfo = new PageInfo<>(allClassGradesCard);
 //
+        int count = (int) classGradesCardPageInfo.getTotal();
         List<Class_Grades_Card> list = classGradesCardPageInfo.getList();
 //
         Map<String,Object> resultMap = new HashMap<>();
