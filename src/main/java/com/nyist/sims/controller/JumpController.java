@@ -85,6 +85,15 @@ public class JumpController {
         return "class/classtestes";
     }
 
+    @RequestMapping("/userlist2")
+    public  String userlist2(){
+        return "user/userlist2";
+    }
+
+//    @RequestMapping("/myInfo")
+//    public String myInfo(){
+//        return "user/myInfo";
+//    }
 
 
 }

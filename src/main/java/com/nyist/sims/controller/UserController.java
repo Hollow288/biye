@@ -1,8 +1,8 @@
 package com.nyist.sims.controller;
 
-import com.nyist.sims.bean.User;
-import com.nyist.sims.bean.User_Role;
+import com.nyist.sims.bean.*;
 import com.nyist.sims.service.PermissionService;
+import com.nyist.sims.service.StudentService;
 import com.nyist.sims.service.UserService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -35,6 +35,9 @@ public class UserController {
 
     @Autowired
     PermissionService permissionService;
+
+    @Autowired
+    StudentService studentService;
 
 
     //查找所有的用户
@@ -314,12 +317,7 @@ public class UserController {
 
 
 
-    @RequestMapping("/userlist2")
-    public  String userlist2(){
 
-
-        return "user/userlist2";
-    }
     //图片上传测试
     @ResponseBody
     @RequestMapping("upload")
@@ -391,7 +389,34 @@ public class UserController {
         return modelAndView;
     }
 
+    @RequestMapping("myInfo")
+    public String myInfo(Model model){
+        //通过shiro拿到我们的subject
+        Subject subject = SecurityUtils.getSubject();
+        User user = (User)subject.getPrincipal();
+        //拿到user.code后强转成int
+//        int studentId = Integer.parseInt(user.getActivecode());
+        //好吧，我们需要的就是String类型的code
+        String activecode = user.getActivecode();
+        if (activecode != null) {
+            Student student = studentService.getStudentById(activecode);
+            model.addAttribute("stu_id", student.getStu_id());
+            model.addAttribute("stu_name", student.getStu_name());
+            model.addAttribute("stu_email", student.getStu_email());
+            model.addAttribute("stu_id_card", student.getStu_id_card());
+            model.addAttribute("stu_sex", student.getStu_sex());
+            model.addAttribute("stu_birthday", student.getStu_birthday());
+            model.addAttribute("nation_name", student.getNation_name());
+            model.addAttribute("stu_status", student.getStu_status());
+            model.addAttribute("class_id", student.getClass_id());
+            model.addAttribute("stu_enrollment_time", student.getStu_enrollment_time());
+            model.addAttribute("stu_political", student.getStu_political());
+            model.addAttribute("stu_address", student.getStu_address());
+            model.addAttribute("stu_age", student.getStu_age());
+        }
 
+        return "user/myInfo";
+    }
 
 
 
