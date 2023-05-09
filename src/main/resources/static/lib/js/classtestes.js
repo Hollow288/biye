@@ -14,14 +14,14 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         ,upload = layui.upload //上传
         ,element = layui.element //元素操作
         ,slider = layui.slider //滑块
+        ,page = true;
 
     //执行一个 table 实例
     table.render({
         elem: '#demo'
         ,height: 800
-        ,limit:'20'
+        ,limit: 20
         ,url: 'classtestes' //数据接口
-        ,title: '用户表'
         ,page: true //开启分页
         ,title:'考试信息表'
         ,toolbar: '' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
@@ -33,6 +33,7 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
             ,{field: 'test_describe', title: '描述', width:'15%', sort: true}
         ] ]
     });
+
 
 //
 });
