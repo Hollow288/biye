@@ -29,8 +29,7 @@ public class CustomRealm extends AuthorizingRealm {
         int uid = user.getUid();
         List<User_Role> roleList = userService.getRole(uid);
 
-        for (User_Role role:
-             roleList) {
+        for (User_Role role: roleList) {
            info.addRole(role.getRole());
 
 

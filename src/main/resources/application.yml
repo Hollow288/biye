@@ -24,8 +24,6 @@ spring:
 
 
 
-
-
   #禁用thymeleaf缓存
   thymeleaf:
     cache: false
